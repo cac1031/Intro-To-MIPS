@@ -3,7 +3,7 @@
 ## Big Project - goldguess.s
 
 Oh No! No-Face has eaten too much and has morphed into its terrifying monstrous form!
-He has presented to you (Sen) a handful of gold nuggets and has challenged you to guess the value it holds.
+He has presented Sen a handful of gold nuggets and has challenged you to guess the value it holds.
 
 Sen has 3 chances to guess it right. Guess correct and the gold nuggets shall be Sen's. Guess wrong and Sen will be gobbled up.
 
