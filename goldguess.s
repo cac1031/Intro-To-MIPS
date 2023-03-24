@@ -1,11 +1,14 @@
-# -- Register Notes --
+# This program gives a user 3 tries to guess the value of gold nuggets
+# Written by: <write your name here and remove triangular brackets>
+
+# -- TODO: Register Notes (Tell what each register stores) --
 # $t0 = 
 # $t1 = 
 # $t2 = 
 # ...
 
 # Constant Declarations
-CORRECT_GUESS = 12			# Replace me with the amount of gold you want
+CORRECT_GUESS = 12			# TODO: Replace me with the amount of gold you want
 
 
 # Where you write your program code
@@ -30,9 +33,9 @@ main:
 
 
 main__epilogue:
-	li	$v0, 0
+	li	$v0, 0						# return 0
 	jr 	$ra
 
-# Write the string variables you want to print here
+# TODO: Write the string variables you want to print here
 # .data is the section where data is stored in main memory (RAM)
 .data

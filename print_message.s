@@ -9,9 +9,9 @@ main:
 # TODO: Add code here to print message
 
 main__epilogue:
-	li	$v0, 0
+	li	$v0, 0						# return 0
 	jr 	$ra
 
-# Write the string variables you want to print here
+# TODO: Write the string variables you want to print here
 # .data is the section where data is stored in main memory (RAM)
 .data
