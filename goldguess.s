@@ -10,6 +10,7 @@ CORRECT_GUESS = 12			# Replace me with the amount of gold you want
 
 # Where you write your program code
 # Note that every program needs a main: label
+# Add more labels!
 .text
 main:
 
@@ -29,6 +30,6 @@ main__epilogue:
 	li	$v0, 0
 	jr 	$ra
 
-# Write the strings you want to print here
+# Write the string variables you want to print here
 # .data is the section where data is stored in main memory (RAM)
 .data
