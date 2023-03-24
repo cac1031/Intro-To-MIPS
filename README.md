@@ -1,6 +1,6 @@
 # Intro To MIPS - Comp Club Autumn School Exercises
 
-### Big Project - goldguess.s
+## Big Project - goldguess.s
 
 Oh No! No-Face has eaten too much and has morphed into its terrifying monstrous form!
 He has presented to you (Sen) a handful of gold nuggets and has challenged you to guess the value it holds.
@@ -14,9 +14,9 @@ If she guesses it within 3 tries, congrats she wins! If she runs out of tries, y
 The tasks are commented out in *goldguess.s*. We will be completing each section as we cover a new topic!
 
 
-### Topical Exercises
+## Topical Exercises
 
-1. **Printing - print_message.s**
+### 1. **Printing - print_message.s**
   - print_message.s -- Write a program that prints a message to the screen
   - [ADD ON] Print multiple messages to the screen
   
@@ -25,7 +25,7 @@ The tasks are commented out in *goldguess.s*. We will be completing each section
         Hello World
         This is my First MIPS Program!
 
-2. **Scanning - math_fun.s || math_cheating.s**
+### 2. **Scanning - math_fun.s || math_cheating.s**
   - math_fun.s -- Write a program that scans in two numbers and return some facts about them!
   
     Sample Output:
@@ -51,7 +51,7 @@ The tasks are commented out in *goldguess.s*. We will be completing each section
         Enter n: 30                               # scanned in n = 30
         Sum of first 30 terms of sequence: 900
 
-3. **If Statements - movie_day.s || arrange_three.s** 
+### 3. **If Statements - movie_day.s || arrange_three.s** 
   - movie_day.s -- Write a program that takes in a number between 1 - 7, denoting the days of the week, and depending on the number, give a movie for the corresponding day of the week
   - Note that if the number is less than 1 or more than 7, your program should print 'Invalid Day!'
   - Come up with a different movie for each day! Bonus points if all are from Studio Ghibli :D
@@ -86,7 +86,7 @@ The tasks are commented out in *goldguess.s*. We will be completing each section
         Arranged Numbers: 3, 42, 42
     ```
 
-4. **Loops - find_factors.s || seq.s** 
+### 4. **Loops - find_factors.s || seq.s** 
   - find_factors.s -- Write a program that scans in a positive integer and prints all the factors that it has.
   - [ADD ON] Print an error message **if** the scanned number is negative
   
