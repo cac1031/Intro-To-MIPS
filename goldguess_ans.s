@@ -1,13 +1,11 @@
-# This program gives a user 3 tries to guess the value of gold nuggets
-# Written by: <write your name here and remove triangular brackets>
+# Sample answer for goldguess.s
+# Written for: 23T1 Introduction to MIPS
 
 ###############################################################################
 
 # -- TODO: Register Notes (Tell what each register stores) --
-# $t0 = 
-# $t1 = 
-# $t2 = 
-# ...
+# $t0 = Increment variable
+# $t1 = User's guess
 
 # Constant Declarations
 CORRECT_GUESS = 13			# TODO: Replace me with the amount of gold you want
@@ -16,33 +14,27 @@ NUM_ROUNDS = 3
 ###############################################################################
 # [TASKS]
 
-# [] (Task 1): Print No-Face's rules, found under 'game_setup'.
+# TODO (Task 1): Print a message from No-Face
 
-# [] (Task 2): Scan in a number representing guess for gold nugget amount
+# TODO (Task 2): Scan in a number representing guess for gold nugget amount
 
-# [] (Task 3): Evaluate guess
-# Note that if Sen guesses a non-positive integer, she can't make further guesses.
+# TODO (Task 3): Evaluate guess
 # - If guess is too low, tell Sen to guess higher
 # - If guess is too high, tell Sen to guess lower
 # - If guess is equal to correct amount, tell Sen she won!
-# Tip: After we jump out of our loop to a condition, don't forget to jump back and resume your loop!
 
-# [] (Task 4): Game Loop
-# Now change it so that Sen has 3 guesses instead of 1
+# TODO (Task 4): Now change it so that Sen has 3 guesses instead of 1
+# Note that if Sen guesses a non-positive integer, she can't make further guesses. Print an appropriate message
+# Similar to Task 3, print a message if each guess is too low or high
 # If Sen guesses correct, we stop the loop and print a message saying she won!
-# If Sen makes 3 wrong guesses, we print a losing message and end the game
-# Adding labels makes loop implementation clearer, we usually have:
-# 1. loop_init
-# 2. loop_cond
-# 3. loop_body
-# 4. loop_increment
-# 5. loop_end
+# If Sen makes 3 wrong guesses, we print a losing message
 
 ###############################################################################
 
 # [Main]
-# - Where you write your program code
-# - Note that every program needs a main: label
+# + Where you write your program code
+# + Note that every program needs a main: label
+# + Add more labels!
 
 .text
 main:
@@ -55,35 +47,69 @@ main__body:
 
 game_start:
 ### [Game Loop] ###
-# TODO (Task 4): Implement your loop
-
+loop_init:
+	li		$t0, 0
+loop_cond:
+	bge		$t0, NUM_ROUNDS, loop_end
 loop_body:
 scan_guess:
-	# TODO (Task 2): Scan in player guess
-	
-	# TODO (Task 3.1): Check and Evaluate the player's guess
-	# Check for invalid guess
+	# Scanning in user guess
+	li		$v0, 4
+	li		$a0, enter_guess_str
+	syscall
 
-	# Evaluate guess
+	li		$v0, 5
+	syscall
+	move 	$t1, $v0
+
+	# user guess checking
+	blt		$t1, 0, invalid_guess
+
+	# Evaluating guesses
+	beq		$t1, CORRECT_GUESS, player_win
+	bgt		$t1, CORRECT_GUESS, too_big
+	blt		$t1, CORRECT_GUESS, too_small
+
+loop_increment:	
+	li		$v0, 4
+	li		$a0, divider_str
+	syscall	
+	addi	$t0, $t0, 1
+	j		loop_cond	
 
 loop_end:
+	j player_lose
 
-### [Game Conditions] ###
-# TODO (Task 3.2): Fill out the conditions below
+### [Conditions] ###
 player_lose:
-	# TODO: Fill out this condition
+	li		$v0, 4
+	li		$a0, lose_str
+	syscall
+	j main__end
 
 player_win:
-	# TODO: Fill out this condition
-
+	li		$v0, 4
+	li		$a0, win_str
+	syscall
+	j		main__end
+	
 invalid_guess:
-	# TODO: Fill out this condition
+	li		$v0, 4
+	li		$a0, invalid_guess_str
+	syscall
+	j main__end
 
 too_big:
-	# TODO: Fill out this condition
+	li		$v0, 4
+	li		$a0, too_high_str
+	syscall
+	j		loop_increment
 	
 too_small:
-	# TODO: Fill out this condition
+	li		$v0, 4
+	li		$a0, too_low_str
+	syscall
+	j		loop_increment
 
 main__end:
 main__epilogue:		# [DO NOT TOUCH]
@@ -94,9 +120,9 @@ main__epilogue:		# [DO NOT TOUCH]
 ###############################################################################
 
 # [Game Setup]
-# - A function that prints the title card, rules and a message from No-Face!
-# - Print your message from No-Face under the print_message label.
-# - Feel free to edit some of the rule and title strings here and in .data
+# + A function that prints the title card, rules and a message from No-Face!
+# + Print your message from No-Face under the print_message label.
+# + Feel free to edit some of the rule and title strings here and in .data !
 
 .text 
 game_setup:
@@ -120,11 +146,26 @@ print_title:
 	
 print_rules:
 	# TODO (Task 1): 
-	# - Print the game rules using the strings in .data
-	# - Print your numRounds between rule3_str and rule4_str
+	# + Print the game rules using the strings in .data
+	# + Print your numRounds between rule3_str and rule4_str
+	la		$a0, rule_head_str
+	syscall
+	la		$a0, rule1_str
+	syscall
+	la		$a0, rule2_str
+	syscall
+	la		$a0, rule3_str
+	syscall
+	li 		$v0, 1
+	li		$a0, NUM_ROUNDS
+	syscall
+	li		$v0, 4
+	la		$a0, rule4_str
+	syscall
+	la		$a0, rule5_str
+	syscall
 
 print_start:
-	li		$v0, 4
 	la		$a0, divider_str
 	syscall
 	la		$a0, start_head_str
