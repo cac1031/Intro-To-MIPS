@@ -17,4 +17,4 @@ main__epilogue:
 enter_num_str:		.asciiz "Enter number: "
 factors1_str:		.asciiz "Factors of "
 factors2_str:		.asciiz ":\n"
-invalid_num_str:	.asciiz "Please enter a poitive integer!\n"
+invalid_num_str:	.asciiz "Invalid number!\n"

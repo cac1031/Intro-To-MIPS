@@ -17,7 +17,7 @@ main__epilogue:
 # .data: The section where data is stored in main memory (RAM)
 .data
 enter_day_str:			.asciiz "Enter day: "
-invalid_day_str:		.ascii  "Invalid day!\n"
+invalid_day_str:		.asciiz  "Invalid day!\n"
 movie_to_watch_str:		.asciiz "Movie to watch: "
 
 movie1_str:			.asciiz "Princess Mononoke\n" # (objectively the best studio ghibli film)

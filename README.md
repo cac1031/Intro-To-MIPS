@@ -101,14 +101,18 @@ The tasks are commented out in *goldguess.s*. We will be completing each section
         16
     ```
     ```
-        Enter number: 2                            # scanned in 16
+        Enter number: 2                            # scanned in 2
         Factors of 2:
         1
         2
     ```
     ``` [ADD ON]
         Enter day: -34                             # scanned in -34
-        Please enter a positive integer!
+        Invalid number!
+    ```
+    ``` [ADD ON]
+        Enter day: 0                               # scanned in 0
+        Invalid number!
     ```
         
   - [CHALLENGE] seq.s -- Write a program that takes in three numbers, the start of the sequence, the end of the sequence and the step (increment) of the sequence and print out all numbers between 'start' and 'stop' (inclusive), while incrementing the number by 'step' each time.
@@ -137,22 +141,10 @@ The tasks are commented out in *goldguess.s*. We will be completing each section
         -9
         -11
     ```
-    ```
-        Enter start: 1                              # scanned in 1
-        Enter stop: -11                             # scanned in -11
-        Enter step: -2                              # scanned in -2
-        1
-        -1
-        -3
-        -5
-        -7
-        -9
-        -11
-    ```
     ``` {No Output}
-        Enter start: 15                             # scanned in 1
-        Enter stop: 0                               # scanned in -11
-        Enter step: 3                               # scanned in -2
+        Enter start: 15                             # scanned in 15
+        Enter stop: 0                               # scanned in 0
+        Enter step: 3                               # scanned in 3
     ```
     ``` {No Output}
         Enter start: 4                              # scanned in 4
