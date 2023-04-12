@@ -1,7 +1,7 @@
 # This program takes in three numbers, the start of the sequence, 
 # the end of the sequence and the step (increment) of the sequence
 # and print out all numbers between 'start' and 'stop' (inclusive), 
-#while incrementing the number by 'step' each time.
+# while incrementing the number by 'step' each time.
 
 # Written by: <write your name here and remove triangular brackets>
 
