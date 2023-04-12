@@ -86,37 +86,9 @@ The tasks are commented out in *goldguess.s*. We will be completing each section
         Arranged Numbers: 3, 42, 42
     ```
 
-### 4. **Loops - find_factors.s || seq.s** 
-  - find_factors.s -- Write a program that scans in a positive integer and prints all the factors that it has.
-  - [ADD ON] Print an error message **if** the scanned number is negative
-  
-    Sample Output:
-    ```
-        Enter number: 16                           # scanned in 16
-        Factors of 16:
-        1
-        2
-        4
-        8
-        16
-    ```
-    ```
-        Enter number: 2                            # scanned in 2
-        Factors of 2:
-        1
-        2
-    ```
-    ``` [ADD ON]
-        Enter day: -34                             # scanned in -34
-        Invalid number!
-    ```
-    ``` [ADD ON]
-        Enter day: 0                               # scanned in 0
-        Invalid number!
-    ```
-        
-  - [CHALLENGE] seq.s -- Write a program that takes in three numbers, the start of the sequence, the end of the sequence and the step (increment) of the sequence and print out all numbers between 'start' and 'stop' (inclusive), while incrementing the number by 'step' each time.
-  - Note that your program has to account for negative steps as well.
+### 4. **Loops - find_factors.s || seq.s**
+  - seq.s -- Write a program that takes in three numbers, the start of the sequence, the end of the sequence and the step (increment) of the sequence and print out all numbers between 'start' and 'stop' (inclusive), while incrementing the number by 'step' each time.
+  - Note that your program does not have to account for negative steps!
 
     Sample Output:
     ```
@@ -155,4 +127,32 @@ The tasks are commented out in *goldguess.s*. We will be completing each section
         Enter start: 1                              # scanned in 1
         Enter stop: 2                               # scanned in 2
         Enter step: 3                               # scanned in 3
+    ```
+
+  - [CHALLENGE] find_factors.s -- Write a program that scans in a positive integer and prints all the factors that it has.
+  - [ADD ON] Print an error message **if** the scanned number is negative
+  
+    Sample Output:
+    ```
+        Enter number: 16                           # scanned in 16
+        Factors of 16:
+        1
+        2
+        4
+        8
+        16
+    ```
+    ```
+        Enter number: 2                            # scanned in 2
+        Factors of 2:
+        1
+        2
+    ```
+    ``` [ADD ON]
+        Enter day: -34                             # scanned in -34
+        Invalid number!
+    ```
+    ``` [ADD ON]
+        Enter day: 0                               # scanned in 0
+        Invalid number!
     ```
