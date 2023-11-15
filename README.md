@@ -1,4 +1,4 @@
-# Intro To MIPS - Comp Club Autumn School Exercises
+# Intro To MIPS - CompClub Autumn School Exercises
 
 ## Big Project - goldguess.s
 
